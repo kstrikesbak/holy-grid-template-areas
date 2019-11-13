@@ -1,6 +1,17 @@
 #app {
   display: grid;
-  height: 300px;
+  height: 1300px;
+  width: 2000px;
+  
+  grid-template-columns: 1.5fr 3fr 3fr 2.5fr;
+  grid-template-rows: 2fr 3fr 3fr 2fr;
+  
+  grid-template-areas:
+  "area-1 area-1 area-1 area-1"
+  "area-5 area-3 area-3 area-6"
+  "area-5 area-4 area-4 area-6"
+  "area-2 area-2 area-2 area-2"
+  
 }
 
 #header, #footer {
@@ -8,11 +19,12 @@
 }
 
 #header {
+  grid-area: area-1;
   
 }
 
 #footer {
-  
+  grid-area: area-2;
 }
 
 #main {
@@ -21,16 +33,20 @@
 
 #article-1 {
   background-color: lightcoral;
+  grid-area: area-3;
 }
 
 #article-2 {
   background-color: violet;
+  grid-area: area-4;
 }
 
 #nav {
   background-color: cornflowerblue;
+  grid-area: area-5;
 }
 
 #ad-area {
   background-color: cornflowerblue;
+  grid-area: area-6;
 }
